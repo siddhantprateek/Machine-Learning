@@ -110,10 +110,6 @@ Imagine you own a snow cone cart, and you have some data about the average numbe
 
 # Components of Machine Learning
 
-SEND FEEDBACK
-
-# Components of Machine Learning
-
 ![clay analogy for machine learning](https://video.udacity-data.com/topher/2021/April/608c4d95_clay99/clay99.png)
 
 Clay analogy for machine learning
