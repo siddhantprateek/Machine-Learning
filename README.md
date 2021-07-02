@@ -1,5 +1,5 @@
 
- <h1 align="center">AWS-Machine Learning Journey</h1>
+ <h1 align="center">Machine Learning Journey</h1>
 <div align="center">
  <img src="https://dunhamconnect.com/wp-content/uploads/aws-migration-1200x675.jpg" alt="aws" height="400px"/>
 </div>
