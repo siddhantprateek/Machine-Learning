@@ -74,8 +74,7 @@ A machine learning model, like a piece of clay, can be molded into many differen
 **Example 1**
 
 Imagine you own a snow cone cart, and you have some data about the average number of snow cones sold per day based on the high temperature. You want to better understand this relationship to make sure you have enough inventory on hand for those high sales days.
-1.  [  
-    1. Lesson Outline](https://classroom.udacity.com/nanodegrees/nd065/parts/a5a4c41f-9cc7-48bd-9f00-582f35a7da53/modules/885b116b-2ca3-453a-8df1-4ea4b436b5da/lessons/15cbb472-1fc6-44fa-a256-4ade21ee0c7f/concepts/0821ddd0-6ff3-4e2f-8f83-1c14e7d0182f "1. Lesson Outline")
+1.  [1. Lesson Outline](https://classroom.udacity.com/nanodegrees/nd065/parts/a5a4c41f-9cc7-48bd-9f00-582f35a7da53/modules/885b116b-2ca3-453a-8df1-4ea4b436b5da/lessons/15cbb472-1fc6-44fa-a256-4ade21ee0c7f/concepts/0821ddd0-6ff3-4e2f-8f83-1c14e7d0182f "1. Lesson Outline")
 2.  [2. What is Machine Learning?](https://classroom.udacity.com/nanodegrees/nd065/parts/a5a4c41f-9cc7-48bd-9f00-582f35a7da53/modules/885b116b-2ca3-453a-8df1-4ea4b436b5da/lessons/15cbb472-1fc6-44fa-a256-4ade21ee0c7f/concepts/4eae70b0-6baf-4a50-bb97-dd5414168cac "2. What is Machine Learning?")
 3.  [3. Components of Machine Learning](https://classroom.udacity.com/nanodegrees/nd065/parts/a5a4c41f-9cc7-48bd-9f00-582f35a7da53/modules/885b116b-2ca3-453a-8df1-4ea4b436b5da/lessons/15cbb472-1fc6-44fa-a256-4ade21ee0c7f/concepts/441ece0a-96c2-4a18-8f3e-3ff87f0e54ba "3. Components of Machine Learning")
 4.  [4. Quiz: What is Machine Learning?](https://classroom.udacity.com/nanodegrees/nd065/parts/a5a4c41f-9cc7-48bd-9f00-582f35a7da53/modules/885b116b-2ca3-453a-8df1-4ea4b436b5da/lessons/15cbb472-1fc6-44fa-a256-4ade21ee0c7f/concepts/bc834d8f-ebc7-454e-a867-f95c5bdb82cc "4. Quiz: What is Machine Learning?")
