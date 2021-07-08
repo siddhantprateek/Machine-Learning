@@ -1,0 +1,303 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "d9056566-51ee-411a-a24c-0e167465d18f",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import numpy as np\n",
+    "\n",
+    "x = np.random.rand()\n",
+    "y = np.random.randint(10, 20, [5, 5])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f592c7bf-f34f-4d1f-b9ef-bd900970141a",
+   "metadata": {},
+   "source": [
+    "    np.random.randint(   10,    20,   [5, 5]) 👈 size 5x5\n",
+    "                        👆      👆\n",
+    "                        low     high"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "fba95814-5e81-46f1-b411-ad6374332268",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(0.5826724426857179,\n",
+       " array([[15, 19, 16, 12, 17],\n",
+       "        [15, 19, 18, 15, 14],\n",
+       "        [11, 16, 18, 14, 12],\n",
+       "        [13, 11, 12, 19, 14],\n",
+       "        [17, 17, 13, 14, 10]]))"
+      ]
+     },
+     "execution_count": 3,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "x, y"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f5ed54aa-0bdd-48fc-9c7b-14c16f3a2429",
+   "metadata": {},
+   "source": [
+    "### `numpy.hstack() `\n",
+    "\n",
+    "```\n",
+    "Syntax : numpy.hstack(tuple)\n",
+    "\n",
+    "Parameters :\n",
+    "tuple : \n",
+    "        [sequence of ndarrays] Tuple containing arrays to be stacked. The arrays must have the    same shape along all but the second axis.\n",
+    "\n",
+    "Return : \n",
+    "       [stacked ndarray] The stacked array of the input arrays.\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "fc5daf65-25f4-4db7-bea2-8c40c6ebc5ea",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[[19 15 13 15 14 12 10 13]\n",
+      " [18 11 16 14 15 14 11 11]\n",
+      " [15 17 18 17 13 12 12 16]\n",
+      " [11 11 11 12 10 17 14 10]\n",
+      " [18 12 17 11 15 18 12 15]]  shape: (5, 8)\n",
+      "\n",
+      "[[19 15 13 15]\n",
+      " [18 11 16 14]\n",
+      " [15 17 18 17]\n",
+      " [11 11 11 12]\n",
+      " [18 12 17 11]\n",
+      " [14 12 10 13]\n",
+      " [15 14 11 11]\n",
+      " [13 12 12 16]\n",
+      " [10 17 14 10]\n",
+      " [15 18 12 15]]  shape: (10, 4)\n"
+     ]
+    }
+   ],
+   "source": [
+    "import numpy as np\n",
+    "\n",
+    "first = np.random.randint(low=10, high=20, size=[5, 4])\n",
+    "second = np.random.randint(low=10, high=20, size=[5, 4])\n",
+    "\n",
+    "\n",
+    "HorizontalStack = np.hstack([first, second])\n",
+    "VerticalStack = np.vstack([first, second])\n",
+    "\n",
+    "\n",
+    "print(HorizontalStack, f' shape: {HorizontalStack.shape}')\n",
+    "print()\n",
+    "print(VerticalStack, f' shape: {VerticalStack.shape}')\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "acc016fc-177a-4c23-8b11-88cff51e1406",
+   "metadata": {},
+   "source": [
+    "### `numpy.concatenate`"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "id": "44ced93f-f3be-40fc-a5f3-c968fb615927",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(array([[13, 17, 19, 11],\n",
+       "        [11, 13, 13, 19],\n",
+       "        [18, 13, 10, 11],\n",
+       "        [11, 19, 12, 19],\n",
+       "        [17, 19, 13, 15],\n",
+       "        [16, 18, 17, 19],\n",
+       "        [14, 18, 18, 19],\n",
+       "        [11, 11, 10, 12],\n",
+       "        [19, 11, 10, 14],\n",
+       "        [17, 19, 18, 13]]),\n",
+       " array([[13, 17, 19, 11, 16, 18, 17, 19],\n",
+       "        [11, 13, 13, 19, 14, 18, 18, 19],\n",
+       "        [18, 13, 10, 11, 11, 11, 10, 12],\n",
+       "        [11, 19, 12, 19, 19, 11, 10, 14],\n",
+       "        [17, 19, 13, 15, 17, 19, 18, 13]]))"
+      ]
+     },
+     "execution_count": 22,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "import numpy as np\n",
+    "\n",
+    "first = np.random.randint(low=10, high=20, size=[5, 4])\n",
+    "second = np.random.randint(low=10, high=20, size=[5, 4])\n",
+    "\n",
+    "\"\"\"\n",
+    "np.concatenate()\n",
+    "Parameters:\n",
+    "\n",
+    "a1, a2, ...: sequence of array like\n",
+    "            he arrays must have the same shape, \n",
+    "            except in the dimension corresponding to axis (the first, by default).\n",
+    "\n",
+    "axis(int):  optional\n",
+    "            The axis along which the arrays will be joined. \n",
+    "            If axis is None, arrays are flattened before use. Default is 0.\n",
+    "\"\"\"\n",
+    "\n",
+    "alongCol = np.concatenate([first, second], axis=1)\n",
+    "alongRow = np.concatenate([first, second], axis=0)\n",
+    "\"\"\"\n",
+    "axis=1 👈 direction along the column\n",
+    "axis=0 👈 direction along the row\n",
+    "\"\"\"\n",
+    "\n",
+    "alongRow, alongCol"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2ee1db56-6612-481e-9259-c380c1979d41",
+   "metadata": {},
+   "source": [
+    "    array([[13, 17, 19, 11],  👈  60\n",
+    "           [11, 13, 13, 19],  👈  56\n",
+    "           [18, 13, 10, 11],  👈  52\n",
+    "           [11, 19, 12, 19],  👈  61\n",
+    "           [17, 19, 13, 15]]) 👈  64\n",
+    "\n",
+    "\n",
+    "```\n",
+    ">>> np.sum(first, axis=1)\n",
+    "array([60, 56, 52, 61, 64])\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9e87fb70-b904-44a2-b786-0066afaf67b8",
+   "metadata": {},
+   "source": [
+    "### `reshape`"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 32,
+   "id": "4c92e18a-4107-475a-a1b3-ee78595e5581",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([[1000,   17,   19,   11,   11,   13,   13,   19,   18,   13],\n",
+       "       [  10,   11,   11,   19,   12,   19,   17,   19,   13,   15]])"
+      ]
+     },
+     "execution_count": 32,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "Reshaped_Array = first.reshape((2, 10))\n",
+    "\n",
+    "first[0, 0] = 1000\n",
+    "\n",
+    "Reshaped_Array"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "1d9b88aa-b98f-4937-b4d9-ebbc1c298a64",
+   "metadata": {},
+   "source": [
+    "**Broadcasting Operation**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 36,
+   "id": "b70f6f56-727d-4b6e-bc15-8dace9d6d1f0",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([[1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000],\n",
+       "       [  10,   11,   11,   19,   12,   19,   17,   19,   13,   15]])"
+      ]
+     },
+     "execution_count": 36,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "Copied_Array = Reshaped_Array.copy()\n",
+    "\n",
+    "Copied_Array[0] = 1000\n",
+    "\n",
+    "Copied_Array"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "1ac72caa-cac7-4fb5-8e58-d379e1ea7be3",
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
