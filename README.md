@@ -9,8 +9,8 @@
 - [ ] **Data Discovery and Visualization**
     - [x] > Numpy and array computation
     - [x] > Processing Images with Numpy
-    - [ ] > Data Acquisition - Web Scrapping, Web APIs
-    - [ ] > Data Analysis using Pandas
+    - [x] > Data Acquisition - Web Scrapping, Web APIs
+    - [x] > Data Analysis using Pandas
     - [ ] > Importing and Exporting Data
 
 - [ ] **Classical Machine Learning Algorithms**
