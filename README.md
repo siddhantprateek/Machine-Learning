@@ -11,7 +11,7 @@
     - [x] > Processing Images with Numpy
     - [x] > Data Acquisition - Web Scrapping, Web APIs
     - [x] > Data Analysis using Pandas
-    - [ ] > Importing and Exporting Data
+    - [x] > Importing and Exporting Data
 
 - [ ] **Classical Machine Learning Algorithms**
    - [ ] > K-Nearest Neighbour search
