@@ -6,7 +6,7 @@
 
 ## MLOps and Natural Language Processing
 
-- [ ] **Data Discovery and Visualization**
+- [x] **Data Discovery and Visualization**
     - [x] > Numpy and array computation
     - [x] > Processing Images with Numpy
     - [x] > Data Acquisition - Web Scrapping, Web APIs
